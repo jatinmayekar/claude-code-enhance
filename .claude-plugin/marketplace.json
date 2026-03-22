@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-enhance",
+  "owner": {
+    "name": "Jatin Mayekar"
+  },
+  "metadata": {
+    "description": "Prompt enhancement skill for Claude Code — fixes vague prompts before execution"
+  },
+  "plugins": [
+    {
+      "name": "enhance",
+      "source": "./",
+      "description": "Fixes vague prompts before execution using proven prompt engineering techniques, requirements discovery, and built-in verification",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jatin Mayekar"
+      },
+      "homepage": "https://github.com/jatinmayekar/claude-code-enhance",
+      "repository": "https://github.com/jatinmayekar/claude-code-enhance",
+      "license": "MIT",
+      "keywords": ["prompt-engineering", "enhancement", "requirements-discovery", "verification"],
+      "category": "productivity"
+    }
+  ]
+}

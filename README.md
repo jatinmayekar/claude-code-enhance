@@ -49,15 +49,21 @@ Enhance:
 
 ## Install
 
-```bash
-claude plugin install jatinmayekar/claude-code-enhance
+**Add the marketplace and install:**
+
+```
+/plugin marketplace add jatinmayekar/claude-code-enhance
+/plugin install enhance@claude-code-enhance
 ```
 
-Or local testing:
+**Or use directly with --plugin-dir:**
 
 ```bash
-claude --plugin-dir /path/to/claude-code-enhance
+git clone https://github.com/jatinmayekar/claude-code-enhance.git
+claude --plugin-dir ./claude-code-enhance
 ```
+
+Works on Mac, Windows, and Linux. Requires [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Tested Results
 
