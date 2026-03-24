@@ -235,6 +235,28 @@ We ran all 3 tests interactively in isolated folders and compared output quality
 
 The `/enhance` skill requires interactive confirmation — it won't proceed in non-interactive (`-p`) mode. This is by design (user should approve the enhanced prompt before execution).
 
+## Anthropic Prompt Docs — Web Search (March 2026) and Gaps vs `/enhance`
+
+- **Web search performed (2026-03-24):**
+  - Successfully fetched Anthropic's public prompt-engineering tutorial overview on GitHub: [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial). (Direct `docs.anthropic.com` prompt-generator/best-practices endpoints returned fetch errors in this environment.)
+- **Key topics in the official tutorial (from the retrieved Table of Contents):**
+  - Basic prompt structure, clarity/directness, role assignment
+  - Separating data from instructions (structured formats like XML)
+  - Formatting output & "speaking for Claude"
+  - Precognition / chain-of-thought (step-by-step thinking)
+  - Using examples (few-shot)
+  - Avoiding hallucinations
+  - Building complex prompts (industry use cases)
+  - Appendix: chaining prompts, tool use, search & retrieval
+- **Overlap with `/enhance` today:**
+  - Role prompting, XML/data separation, output formatting, chain-of-thought, and hallucination mitigation via verification are already embedded in SKILL.md.
+  - `/enhance` adds requirements discovery and execution-time verification that the tutorial does not operationalize.
+- **Gaps vs the official Anthropic material:**
+  - **Few-shot/examples:** `/enhance` does not yet inject example I/O pairs to steer style/format, despite Chapter 7 ("Using Examples").
+  - **Chaining/tool use/RAG:** No guidance for when to chain sub-prompts, call tools, or request retrieval, though the Appendix covers these patterns.
+  - **Complex prompt templates:** `/enhance` lacks industry-specific scaffolds (e.g., legal/finance/chatbot cases highlighted in Chapter 9).
+  - **Prompt clarity checklist:** While `/enhance` analyzes vagueness, it doesn't explicitly surface the "basic structure + clear/direct" checklist from early chapters as a quick pre-flight.
+
 ## References
 
 1. Yang, C. et al. (2025). "What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts." [arXiv:2505.13360](https://arxiv.org/abs/2505.13360)
