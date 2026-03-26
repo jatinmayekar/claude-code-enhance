@@ -1,5 +1,5 @@
-RESEARCH.md
 THREADS_POST.md
 tests/
 .claude/
 .claude-plugin/marketplace.json
+Dockerfile.test
