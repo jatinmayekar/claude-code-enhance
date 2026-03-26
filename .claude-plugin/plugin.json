@@ -1,5 +1,8 @@
 {
   "name": "enhance",
   "description": "Prompt enhancement skill — fixes vague prompts before execution using Anthropic's prompt engineering techniques + requirements discovery + verification",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "author": {
+    "name": "Jatin Mayekar"
+  }
 }
