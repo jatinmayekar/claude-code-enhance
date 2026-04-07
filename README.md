@@ -96,6 +96,23 @@ Every technique in `/enhance` is sourced from published research or Anthropic's 
 
 `/enhance` is not invented from scratch — it's a curated integration of proven techniques into a single Claude Code skill.
 
+## How This Relates to Anthropic Prompt Libraries & Prompt Improver
+
+Anthropic already offers prompt-improvement resources (Prompt Improver, prompt library templates, best-practices docs) on the web. `/enhance` brings those techniques into the Claude Code terminal workflow:
+
+- **Same playbook, new surface:** Applies the Prompt Improver patterns (specificity, XML structuring, role setting, CoT, output format) directly inside Claude Code, so developers can stay in the terminal/editor instead of copying prompts from the web console.
+- **Requirements discovery built-in:** Goes beyond static templates by auto-detecting vague or missing requirements and proposing concrete defaults before execution.
+- **Execution + verification loop:** After enhancement, it runs the task and verifies against generated criteria—behavior not present in the web Prompt Improver or library snippets.
+- **Model-aware complexity:** Adjusts requirement breadth to model tier (Haiku/Sonnet/Opus) to stay performant in-code.
+
+In short, `/enhance` is the terminal/Claude Code equivalent of Anthropic's web-based prompt improvement tools, but packaged as an executable skill with discovery and verification.
+
+## Market Positioning
+
+- **Gap today:** The Anthropic prompt library and Prompt Improver live in the web console; there is no out-of-the-box Claude Code skill that operationalizes those patterns for in-editor/terminal use.
+- **Big win for developers:** Keeps prompt enhancement, execution, and verification in one flow, reducing context switches and making best-practices the default.
+- **Blue-ocean for skills:** Among 300+ community plugins/skills (verified March 2026), none offer a prompt-enhancement + requirements-discovery + verification workflow for Claude Code. `/enhance` is designed to fill that niche.
+
 ## How It Works
 
 1. **Analyze** — identify vague, missing, and ambiguous elements in the prompt
